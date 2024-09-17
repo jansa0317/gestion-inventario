@@ -1,5 +1,6 @@
+# Clase para representar un Producto
 class Producto:
-    def __init__(self, nombre, descripcion, precio, stock_inicial, categoria):
+    def __init__(self, nombre, descripcion, precio, stock_inicial, categoria=None):
         self.nombre = nombre
         self.descripcion = descripcion
         self.precio = precio
@@ -10,9 +11,12 @@ class Producto:
         self.stock += cantidad
 
     def retirar_stock(self, cantidad):
-        if cantidad > self.stock:
-            raise ValueError("No hay suficiente stock")
-        self.stock -= cantidad
+        if cantidad <= self.stock:
+            self.stock -= cantidad
+
+    def valor_total_stock(self):
+        return self.stock * self.precio
 
     def __str__(self):
-        return f"Producto: {self.nombre}, Precio: {self.precio}, Stock: {self.stock}, Categoria: {self.categoria.nombre}"
+        categoria = self.categoria.nombre if self.categoria else "Sin categoría"
+        return f"Producto: {self.nombre} - {self.descripcion} | Precio: ${self.precio} | Stock: {self.stock} | Categoría: {categoria}"
