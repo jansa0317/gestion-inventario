@@ -52,28 +52,31 @@ def informe_stock_por_bodega(bodegas):
 
 # Datos de ejemplo
 categoria1 = Categoria("Electrónica", "Dispositivos electrónicos")
-categoria2 = Categoria("Hogar", "Productos para el hogar")
+categoria2 = Categoria("Muebles", "Productos para el hogar")
 
-producto1 = Producto("Laptop", "Laptop de última generación", 1500, 10, categoria1)
-producto2 = Producto("Smartphone", "Teléfono inteligente", 800, 20, categoria1)
-producto3 = Producto("Lavadora", "Lavadora automática", 500, 5, categoria2)
+producto1 = Producto("Laptop", "Laptop de última generación", 1500, 10, categoria1,)
+producto2 = Producto("Smartphone", "Teléfono inteligente", 800, 20, categoria1,)
+producto3 = Producto("Sillon", "Sillon xl", 1200, 20, categoria2)
 
 proveedor1 = Proveedor("Proveedor ABC", "123 Calle Principal", "555-1234")
 proveedor1.agregar_producto(producto1)
 proveedor1.agregar_producto(producto3)
 
-bodega1 = Bodega("Bodega Central", "Ciudad", 50)
+bodega1 = Bodega("Bodega Central", "Cali", 50)
+bodega2 = Bodega("Chipichape", "Cali", 60)
 bodega1.agregar_producto(producto1)
 bodega1.agregar_producto(producto2)
+bodega2.agregar_producto(producto3)
 
 productos = [producto1, producto2, producto3]
 categorias = [categoria1, categoria2]
 proveedores = [proveedor1]
-bodegas = [bodega1]
+bodegas = [bodega1,bodega2]
+
 
 # Ejecución de consultas y reportes
 print("Consulta de un producto:")
-print(consultar_producto(producto2))
+print(consultar_producto(producto1))
 
 print("\nConsulta de una categoría:")
 print(consultar_categoria(categoria1))
@@ -82,7 +85,9 @@ print("\nConsulta de un proveedor:")
 print(consultar_proveedor(proveedor1))
 
 print("\nConsulta de una bodega:")
-print(consultar_bodega(bodega1))
+print(consultar_bodega(bodega2))
+
+#Reporte
 
 print("\nInforme de stock total:")
 print(informe_stock_total(productos))

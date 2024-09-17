@@ -1,3 +1,9 @@
+# Sistema de ges=ón de inventario:
+
+**Autor:** Brian Estiben Jansasoy  
+**Profesor:** Diego Fernando Marin 
+**Curso:** Lenguaje de Programacion Avanzada 1 
+
 # Sistema de Gestión de Inventario
 
 Este proyecto consiste en un sistema de gestión de inventario que permite registrar productos, proveedores, categorías y gestionar el stock en diferentes bodegas.
