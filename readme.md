@@ -1,4 +1,4 @@
-# Sistema de ges=ón de inventario:
+# Sistema de gestión de inventario:
 
 **Autor:** Brian Estiben Jansasoy  
 **Profesor:** Diego Fernando Marin 
